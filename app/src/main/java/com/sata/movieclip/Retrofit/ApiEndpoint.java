@@ -1,5 +1,6 @@
 package com.sata.movieclip.Retrofit;
 
+import com.sata.movieclip.Model.MovieByIdModel;
 import com.sata.movieclip.Model.MovieListModel;
 
 import java.util.Map;
@@ -12,5 +13,10 @@ public interface ApiEndpoint {
     @GET("/") Call<MovieListModel> getData(
             @QueryMap Map<String, String> options
     );
+
+    @GET("/") Call<MovieByIdModel> getDetail(
+            @QueryMap Map<String, String> options
+    );
+
 
 }
