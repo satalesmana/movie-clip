@@ -10,9 +10,19 @@
         <entry key="..\:/SataLesmana/movie-clip/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/SataLesmana/movie-clip/app/src/main/res/layout/adapter_list_item.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/btn_rounded_white.xml" value="0.184" />
+<<<<<<< HEAD
+        <entry key="app/src/main/res/drawable/ic_baseline_lock_open_24.xml" value="0.126" />
+        <entry key="app/src/main/res/drawable/input_style.xml" value="0.1115" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/activity_splah.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/adapter_list_item.xml" value="0.33" />
+        <entry key="app/src/main/res/menu/main_menu.xml" value="0.19270833333333334" />
+=======
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.12001811594202899" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.10507246376811594" />
         <entry key="app/src/main/res/layout/activity_splah.xml" value="0.2" />
+>>>>>>> c3c25d9fc2fdc0a1aebee61f3b39a15b73a65ce3
       </map>
     </option>
   </component>
