@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -23,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private MovieListAdapter movieListAdapter;
     LinearLayoutManager linearLayoutManager;
+    private ProgressDialog mProgres;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
         params.put("apikey","b45dad4f");
         params.put("s", keyword);
 
+        mProgres = new ProgressDialog(this);
+        mProgres.setTitle("Loading");
+        mProgres.setMessage("Sedang mengambil data...");
+        mProgres.show();
+
         ApiService.endpoint().getData(params).enqueue(new Callback<MovieListModel>() {
             @Override
             public void onResponse(Call<MovieListModel> call, Response<MovieListModel> response) {
@@ -51,11 +60,26 @@ public class MainActivity extends AppCompatActivity {
 
                 movieListAdapter = new MovieListAdapter(MainActivity.this,searches );
                 recyclerView.setAdapter(movieListAdapter);
+
+                mProgres.dismiss();
             }
 
             @Override
             public void onFailure(Call<MovieListModel> call, Throwable t) {
                 Log.d("TES GAGAL", t.toString());
+                String pesan =  t.toString() + "\n \nKlik OK untuk memuat ulang data...";
+                mProgres.dismiss();
+
+                AlertDialog.Builder builder =  new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("Infro");
+                builder.setMessage(pesan)
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                onLoadMovieData();
+                            }
+                        });
+                builder.show();
             }
         });
 
