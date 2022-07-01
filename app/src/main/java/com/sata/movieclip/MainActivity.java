@@ -15,6 +15,9 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.sata.movieclip.Adapter.MovieListAdapter;
 import com.sata.movieclip.Model.MovieListModel;
@@ -33,22 +36,36 @@ public class MainActivity extends AppCompatActivity {
     private MovieListAdapter movieListAdapter;
     LinearLayoutManager linearLayoutManager;
     private ProgressDialog mProgres;
-
+    private Button btnCari;
+    private EditText etCari;
+    private String keyword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         recyclerView = findViewById(R.id.recle_movie_list);
+        btnCari = findViewById(R.id.btnCari);
+        etCari = findViewById(R.id.etCari);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
         recyclerView.setNestedScrollingEnabled(false);
 
+
+        keyword =  "ironman";
         onLoadMovieData();
+
+        btnCari.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                keyword = etCari.getText().toString();
+                onLoadMovieData();
+            }
+        });
     }
 
     private void onLoadMovieData(){
-        String keyword =  "ironman";
         Map<String, String> params = new HashMap<>();
         params.put("apikey","b45dad4f");
         params.put("s", keyword);
