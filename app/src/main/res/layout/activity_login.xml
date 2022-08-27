@@ -9,11 +9,87 @@
     android:gravity="center"
     tools:context=".LoginActivity">
 
+    <ImageView
+        android:layout_width="294dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo_splash"
+        android:layout_marginBottom="-20dp"
+        />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Halaman Login"
-        android:textSize="40dp"
-        android:textColor="@color/white"/>
+        android:text="@string/welcome_login"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:fontFamily="@font/roboto_reguler"
+        />
 
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:drawablePadding="15dp"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/white"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/input_hint"
+            android:gravity="center_vertical"
+            android:ems="12"
+            android:hint="@string/login_input_email"
+            android:drawableLeft="@drawable/ic_baseline_mail_outline_24"
+            android:layout_height="65dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:drawablePadding="15dp"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/white"
+            android:textColorHint="@color/input_hint"
+            android:gravity="center_vertical"
+            android:inputType="textPassword"
+            android:ellipsize="start"
+            android:ems="12"
+            android:hint="@string/login_input_password"
+            android:drawableLeft="@drawable/ic_baseline_lock_open_24"
+            android:layout_height="65dp"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:text="LOGIN"
+        android:textColor="@color/primary"
+        android:layout_width="match_parent"
+        android:background="@drawable/btn_rounded_white"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+       android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/loginGoogle"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>
