@@ -4,8 +4,9 @@
     <string name="welcome_login">Get more movie update.</string>
     <string name="login_input_email">Type your email</string>
     <string name="login_input_password">Type your password</string>
-
+    <string name="account_register">Don’t have an account? <u>Register now</u></string>
     <string name="menu_profile">Profile</string>
     <string name="menu_logout">Logout</string>
+    <string name="forgot_password">Forgot Password?</string>
     <string name="long_text">Loremp ipsum Loremp ipsum Loremp ipsum Loremp ipsum Loremp ipsum Loremp ipsum Loremp ipsum Loremp ipsum Loremp ipsum Loremp ipsum Loremp ipsum Loremp ipsum Loremp ipsum Loremp ipsum Loremp ipsum Loremp ipsum Loremp ipsum Loremp ipsum </string>
 </resources>
