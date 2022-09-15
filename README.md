@@ -1,23 +1,23 @@
-[![Forks][forks-shield]][forks-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
+
 
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
   <a href="https://github.com/satalesmana/movie-clip">
     <img src="app/src/main/res/drawable/logo_splash.png" alt="Logo" >
   </a>
+  
+  <p>
+    <a href="https://github.com/satalesmana/movie-clip/issues"><img src="https://img.shields.io/github/issues/satalesmana/movie-clip" alt="Issues"></a>
+    <a href="#"><img src="https://img.shields.io/github/forks/satalesmana/movie-clip" alt="Forks"></a>
+    <!--<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>-->
+    <a href="#"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  </p>
 
-  <h3 align="center">Movie Clip</h3>
+  <h3>Movie Clip</h3>
 
   <p align="center">
-    find your favorite movie
+    A simple mobile application to find your favourite movie, this application uses data from OMDb API
   </p>
 </div>
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-[forks-shield]: https://img.shields.io/github/forks/satalesmana/movie-clip.svg?style=for-the-badge
-[forks-url]: https://github.com/satalesmana/movie-clip/network/members
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/sata-lesmana-0a5b93116
