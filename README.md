@@ -14,10 +14,12 @@
     <!--<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>-->
     <a href="#"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
   </p>
-
-  <h3>Movie Clip</h3>
-
-  <p align="center">
-    A simple mobile application to find your favourite movie, this application uses data from OMDb API
-  </p>
 </div>
+
+## About Movie Clip
+
+A simple mobile application to find your favourite movie, this application uses data from OMDb API
+
+## License
+
+The Movie Clip is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
